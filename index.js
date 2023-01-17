@@ -12,19 +12,16 @@ const alumni = [
 {name:'Uzma', job:'Thyme Care',language:'JavaScript', age:22}]
 
 const averageAge = arr => {
-    return Math.floor(arr.reduce((acc,curr) =>{
+    return Math.round(arr.reduce((acc,curr) =>{
         return acc + curr.age
     },0)/arr.length)
 }
-console.log(averageAge(alumni))
 
 const orderedAlumni = arr => {
     return arr.sort((a,b) => b.age - a.age)
 }
-console.log(orderedAlumni(alumni))
 
 const allUseJavaScript = arr => {
     return arr.every(elem => /(javascript)/gi.test(elem.language))
 }
 
-console.log(allUseJavaScript(alumni))
